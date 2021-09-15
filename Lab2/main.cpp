@@ -3,16 +3,14 @@
 
 using namespace std;
 
-#define PI 3.1415
-
 void No1() {
     double A;
     cout << "A1 = ";
     cin >> A;
-    double Z = 2 * pow(sin(3 * PI - 2 * A) * pow(cos(5 * PI - 2 * A), 2), 2);
+    double Z = 2 * pow(sin(3 * M_PI - 2 * A) * pow(cos(5 * M_PI - 2 * A), 2), 2);
     cout << "Z1 = " << Z << endl << "A2 = ";
     cin >> A;
-    Z = 1 / 4 - 1 / 4 * sin(5 / 2 * PI - 8 * A);
+    Z = 1 / 4 - 1 / 4 * sin(5 / 2 * M_PI - 8 * A);
     cout << "Z2 = " << Z << endl;
 }
 
@@ -23,7 +21,7 @@ void No2() {
     double Z = cos(A) + sin(A) + cos(3 * A) + sin(3 * A);
     cout << "Z1 = " << Z << endl << "A2 = ";
     cin >> A;
-    Z = 2 * sqrt(2) * cos(2 * A) * sin(PI / 4 + 2 * A);
+    Z = 2 * sqrt(2) * cos(2 * A) * sin(M_PI / 4 + 2 * A);
     cout << "Z2 = " << Z << endl;
 }
 
@@ -75,7 +73,7 @@ void No7() {
     double A;
     cout << "A = ";
     cin >> A;
-    double Z = pow(cos((3 / 8) * PI - A / 4), 2) - pow(cos((11 / 8) * PI + A / 4), 2);
+    double Z = pow(cos((3 / 8) * M_PI - A / 4), 2) - pow(cos((11 / 8) * M_PI + A / 4), 2);
     cout << "Z1 = " << Z << endl;
     Z = (sqrt(2) / 2) * sin(A / 2);
     cout << "Z2 = " << Z << endl;
@@ -109,9 +107,9 @@ void No10() {
     double A;
     cout << "A = ";
     cin >> A;
-    double Z = sin((PI / 2) + 3 * A) / (1 - sin(3 * A - PI));
+    double Z = sin((M_PI / 2) + 3 * A) / (1 - sin(3 * A - M_PI));
     cout << "Z1 = " << Z << endl;
-    Z = 1 / tan(5 / 4 * PI + 3 / 2 * A);
+    Z = 1 / tan(5 / 4 * M_PI + 3 / 2 * A);
     cout << "Z2 = " << Z << endl;
 }
 
@@ -131,7 +129,7 @@ void No12() {
     cin >> A;
     double Z = (sin(4 * A) / (1 + cos(4 * A))) * (cos(2 * A) / (1 + cos(2 * A)));
     cout << "Z1 = " << Z << endl;
-    Z = 1 / tan(3 / 2 * PI - A);
+    Z = 1 / tan(3 / 2 * M_PI - A);
     cout << "Z2 = " << Z << endl;
 }
 
