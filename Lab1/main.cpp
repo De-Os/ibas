@@ -12,10 +12,10 @@ void No1() {
     cin >> x;
     cout << "(float) y = ";
     cin >> y;
-    cout << c << ',' << x << ',' << y << endl << endl;
-    cout << "(char) c" << c << endl;
-    cout << "(int) x" << x << endl;
-    cout << "(float) y" << y << endl;
+    cout << c << ',' << x << ',' << y << endl;
+    cout << "(char) c = " << c << endl;
+    cout << "(int) x = " << x << endl;
+    cout << "(float) y = " << y << endl << endl;
 }
 
 void No2() {
@@ -28,11 +28,12 @@ void No2() {
     cin >> z;
     printf("x = %.2f\n", x);
     printf("y = %.3f\n", y);
-    printf("z = %.4f\n", z);
+    printf("z = %.4f\n\n", z);
 }
 
 int main() {
     No1();
     No2();
+
     return 0;
 }
