@@ -3,6 +3,10 @@
 
 using namespace std;
 
+float distance(int X1, int Y1, int X2, int Y2) {
+    return sqrt(pow(X2 - X1, 2) + pow(Y2 - Y1, 2));
+}
+
 void No1() {
     int X, sum = 0;
     cout << "X = ";
@@ -71,10 +75,6 @@ void No5() {
     cout << "Y3 = ";
     cin >> Y3;
     cout << "perimeter = "(distance(X1, Y1, X2, Y2) + distance(X2, Y2, X3, Y3) + distance(X3, Y3, X1, Y1)) << endl;
-}
-
-float distance(int X1, int Y1, int X2, int Y2) {
-    return sqrt(pow(X2 - X1, 2) + pow(Y2 - Y1, 2));
 }
 
 int main() {
