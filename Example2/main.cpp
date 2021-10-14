@@ -1,28 +1,62 @@
 #include <iostream>
-#include <cmath>
+#include <clocale>
+#include <cstdlib>
+#include <ctime>
+#include <iomanip>
+
 
 using namespace std;
 
-int factorial(int x) {
-    int result = 1;
-    for (int i = 1; i <= x; i++) result *= i;
-    return result;
-}
-
 int main() {
-    int X;
-    int maxN = 2;
-    float result = 0;
-    cout << "X = ";
-    cin >> X;
+    setlocale(LC_ALL, "Rus");
+    int *array, i, j, k, N, M;
+    cout << "Кол-во строк массива = ";
+    cin >> N;
+    cout << "Кол-во столбцов массива = ";
+    cin >> M;
+    cout << endl;
 
-    for (int n = 0; n <= maxN; n++) {
-        result += pow(-1, n) * (pow(X, 2 * n + 1) / factorial(2 * n + 1));
+    array = (int *) malloc(N * M * sizeof(int));
+    if (array == NULL) exit(1);
+
+    int a, b;
+    cout << "Нижняя граница рандомизации = ";
+    cin >> a;
+    cout << "Верхняя граница рандомизации = ";
+    cin >> b;
+    cout << endl;
+
+    srand(time(NULL));
+    if (a > b) {
+        int r = a;
+        a = b;
+        b = r;
+    }
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < M; j++) {
+            *(array + i * M + j) = rand() % (b - a + 1) + a;
+        }
+    }
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < M; j++) {
+            for (k = 0; k < M; k++) {
+                if (*(array + i * M + j) < *(array + i * M + k)) {
+                    int tmp = *(array + i * M + j);
+                    *(array + i * M + j) = *(array + i * M + k);
+                    *(array + i * M + k) = tmp;
+                }
+            }
+        }
     }
 
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < M; j++) {
+            cout << setw(5) << *(array + i * M + j) << " |";
+        }
+        cout << endl;
+    }
+    cout << endl;
 
-    cout << "sin(x) = " << result << endl;
-
-
+    free(array);
     return 0;
 }
