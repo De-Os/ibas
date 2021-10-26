@@ -37,7 +37,6 @@ void No1() {
 }
 
 void No2() {
-    setlocale(LC_ALL, "Rus");
     int N, i, a, b, j, temp, sum = 0;
     cout << "Размер массива: ";
     cin >> N;
@@ -75,7 +74,6 @@ void No2() {
 }
 
 void No3() {
-    setlocale(LC_ALL, "Rus");
     int N, i, a, b, j, count = 0, max = INT_MIN;
     cout << "Размер массива: ";
     cin >> N;
@@ -108,7 +106,6 @@ void No3() {
 }
 
 void No4() {
-    setlocale(LC_ALL, "Rus");
     int N, i, a, b, sum = 0, max = INT_MIN;
     cout << "Размер массива: ";
     cin >> N;
@@ -140,7 +137,6 @@ void No4() {
 }
 
 void No5() {
-    setlocale(LC_ALL, "Rus");
     int N, i, a, b, k1 = 0, k2 = 0, k3 = 0;
     cout << "Размер массива: ";
     cin >> N;
