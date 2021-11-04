@@ -228,7 +228,7 @@ void No12() {
 
 int main() {
     No1();
-    No2()
+    No2();
     No3();
     No4();
     No5();

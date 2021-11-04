@@ -74,7 +74,7 @@ void No5() {
     cin >> X3;
     cout << "Y3 = ";
     cin >> Y3;
-    cout << "perimeter = "(distance(X1, Y1, X2, Y2) + distance(X2, Y2, X3, Y3) + distance(X3, Y3, X1, Y1)) << endl;
+    cout << "perimeter = " << (distance(X1, Y1, X2, Y2) + distance(X2, Y2, X3, Y3) + distance(X3, Y3, X1, Y1)) << endl;
 }
 
 int main() {
