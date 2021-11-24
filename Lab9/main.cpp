@@ -62,8 +62,8 @@ void No2() {
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    cout << "Номер 1" << endl;
-    No1();
+    //cout << "Номер 1" << endl;
+    //No1();
     cout << endl << "Номер 2" << endl;
     No2();
 

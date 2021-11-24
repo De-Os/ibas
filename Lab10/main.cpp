@@ -18,13 +18,14 @@ int dividersCount(int n) {
 }
 
 int basicDividersCount(int n) {
-    int count = 2; // т.к. всегда само число
+    int count = 0;
 
+    if (n % 2 == 0) count++;
     if (n < 0) n = abs(n);
 
     if (n == 1) count--;
     for (int i = n / 2; i > 1; i--) {
-        if (n % i == 0) {
+        if (n % i == 0 && i % 2 == 0) {
             if (dividersCount(i) == 2 || i == 1) count++;
         }
     }
@@ -218,7 +219,7 @@ void NoDop() {
 int main() {
     setlocale(LC_ALL, "Rus");
 
-    /*cout << "Номер 1" << endl;
+    cout << "Номер 1" << endl;
     No1();
     cout << endl << "Номер 2" << endl;
     No2();
@@ -227,7 +228,7 @@ int main() {
     cout << endl << "Номер 4" << endl;
     No4();
     cout << endl << "Номер 5" << endl;
-    No5();*/
+    No5();
     cout << endl << "Дополнительное задание:" << endl;
     NoDop();
 
